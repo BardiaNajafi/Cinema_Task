@@ -48,6 +48,7 @@ namespace Project.Application.Services
                     RoomName = s.Room.Name,
                     Seats = s.Room.Seats.Select(r => new SeatDto
                     {
+                        SeatId = r.Id,
                         Number = r.Number,
                         Row = r.Row,
                         IsBooked = r.IsBooked
@@ -61,8 +62,12 @@ namespace Project.Application.Services
         public async Task<string> BookSeatAsync(int seatId, int showtimeId, int userId)
         {
             var seat = await _context.Seats.FirstOrDefaultAsync(s => s.Id == seatId);
-            if (seat == null || seat.IsBooked)
-                return "Seat is not available";
+            if (seat == null )
+                return "Seat is not available.";
+            if (seat.IsBooked)
+            {
+                return "Seat is already booked.";
+            }
 
             // Mark as booked
             seat.IsBooked = true;

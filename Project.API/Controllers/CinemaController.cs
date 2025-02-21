@@ -31,10 +31,10 @@ namespace Project.API.Controllers
             return Ok(movies);
         }
 
-        [HttpGet("seats/{showtimeId}")]
-        public async Task<IActionResult> GetAllSeats(int showtimeId)
+        [HttpGet("seats/{showId}")]
+        public async Task<IActionResult> GetAllSeats(int showId)
         {
-            var data = await _cinemaService.GetAllSeatsAsync(showtimeId);
+            var data = await _cinemaService.GetAllSeatsAsync(showId);
             return Ok(data);
         }
 
