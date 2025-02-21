@@ -13,6 +13,9 @@ public static class DependencyInjection
         Services.AddScoped<IMovieService,MovieService>();
 
         Services.AddScoped<IRoomService,RoomService>();
+        Services.AddScoped<ICinemaService,CinemaService>();
+
+
 
         return Services;
     }
