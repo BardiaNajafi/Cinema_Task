@@ -4,4 +4,4 @@ Clean Architectrue<br><br>
  lastest stable version of .Net Core 8<br><br><br>
 
  Note:<br>
- Optional part which was crud was only done to Movie and Room Entites (and not for schedule)
+ Optional part which was CRUD was only done to Movie and Room Entites (and not for schedule,etc..)
