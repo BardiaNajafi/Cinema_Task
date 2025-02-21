@@ -1,0 +1,6 @@
+@Bardia_Najafi_HostAddress = http://localhost:5121
+
+GET {{Bardia_Najafi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
